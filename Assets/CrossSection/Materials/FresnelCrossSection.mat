@@ -36,7 +36,15 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Metallic:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal_Map:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -48,8 +56,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
+    - _Alpha: 1
     - _AlphaClip: 0
+    - _BUILTIN_QueueControl: 0
+    - _BUILTIN_QueueOffset: 0
     - _Blend: 0
     - _BumpScale: 1
     - _Cull: 2
@@ -57,6 +69,7 @@ Material:
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _FresnelPower: 3
+    - _Fresnel_Power: 2
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -72,19 +85,26 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0, g: 0.99320316, b: 1, a: 1}
+    - _BaseColor: {r: 0, g: 0.9932031, b: 1, a: 0.16470589}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Plane1Normal: {r: 0, g: 1.0000001, b: -0.00000011920929, a: 0}
-    - _Plane1Position: {r: 1.54, g: 0.1, b: -0, a: 0}
-    - _Plane2Normal: {r: 0, g: -0.6131829, b: 0.789941, a: 0}
-    - _Plane2Position: {r: 1.54, g: 1.12, b: 0.12, a: 0}
+    - _Plane1Position: {r: 1.54, g: 1.35, b: 0, a: 0}
+    - _Plane2Normal: {r: 0, g: 0, b: 1, a: 0}
+    - _Plane2Position: {r: 1.54, g: 1.35, b: 0, a: 0}
     - _Plane3Normal: {r: 1.0000001, g: 0, b: -0.00000011920929, a: 0}
-    - _Plane3Position: {r: 1.95, g: 1.35, b: -0, a: 0}
+    - _Plane3Position: {r: 1.54, g: 1.35, b: 0, a: 0}
     - _PlaneNormal: {r: 0, g: 0.9377072, b: 0.34742665, a: 0}
     - _PlanePosition: {r: 3.1, g: 0.6, b: -0.01, a: 0}
+    - _Plane_1_Normal: {r: 0, g: 1.0000001, b: -0.00000011920929, a: 0}
+    - _Plane_1_Position: {r: 1.54, g: -0.008, b: 0, a: 0}
+    - _Plane_2_Normal: {r: 0, g: 0, b: 1, a: 0}
+    - _Plane_2_Position: {r: 1.54, g: 1.35, b: 0, a: 0}
+    - _Plane_3_Normal: {r: 1.0000001, g: 0, b: -0.00000011920929, a: 0}
+    - _Plane_3_Position: {r: 1.54, g: 1.35, b: 0, a: 0}
     - _Plane_Normal: {r: 0, g: 1, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+  m_BuildTextureStacks: []
 --- !u!114 &140775858228057820
 MonoBehaviour:
   m_ObjectHideFlags: 11
@@ -98,3 +118,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
+--- !u!114 &1233838135282123677
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639247ca83abc874e893eb93af2b5e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0

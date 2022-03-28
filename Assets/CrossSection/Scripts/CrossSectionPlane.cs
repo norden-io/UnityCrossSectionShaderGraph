@@ -17,8 +17,8 @@ public class CrossSectionPlane : MonoBehaviour {
 		}
 
 		foreach (var material in materials) {
-			material.SetVector($"_Plane{plane}Position", transform.position);
-			material.SetVector($"_Plane{plane}Normal", transform.forward);
+			material.SetVector($"_Plane_{plane}_Position", transform.position);
+			material.SetVector($"_Plane_{plane}_Normal", transform.forward);
 		}
 	}
 }
