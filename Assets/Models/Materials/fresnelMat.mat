@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FresnelCrossSection
+  m_Name: fresnelMat
   m_Shader: {fileID: -6465566751694194690, guid: 4036e48255e0eae4f9a8896aa7f04cf5,
     type: 3}
   m_ShaderKeywords: 
@@ -56,7 +56,7 @@ Material:
     - _Cutoff: 0.5
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _FresnelPower: 3
+    - _FresnelPower: 2
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -72,20 +72,13 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0, g: 0.99320316, b: 1, a: 1}
-    - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Plane1Normal: {r: 0, g: 1.0000001, b: -0.00000011920929, a: 0}
-    - _Plane1Position: {r: 1.54, g: 0.1, b: -0, a: 0}
-    - _Plane2Normal: {r: 0, g: -0.6131829, b: 0.789941, a: 0}
-    - _Plane2Position: {r: 1.54, g: 1.12, b: 0.12, a: 0}
-    - _Plane3Normal: {r: 1.0000001, g: 0, b: -0.00000011920929, a: 0}
-    - _Plane3Position: {r: 1.95, g: 1.35, b: -0, a: 0}
-    - _PlaneNormal: {r: 0, g: 0.9377072, b: 0.34742665, a: 0}
-    - _PlanePosition: {r: 3.1, g: 0.6, b: -0.01, a: 0}
-    - _Plane_Normal: {r: 0, g: 1, b: 0, a: 0}
+    - _PlaneNormal: {r: 0, g: 1, b: 0, a: 0}
+    - _PlanePosition: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
---- !u!114 &140775858228057820
+--- !u!114 &4363277099026025716
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
