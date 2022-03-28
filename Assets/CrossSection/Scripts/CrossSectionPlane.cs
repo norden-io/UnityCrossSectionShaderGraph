@@ -10,12 +10,6 @@ public class CrossSectionPlane : MonoBehaviour {
 	public float KeyMoveSpeed = 1;
 
 	void Update() {
-		if (Input.GetKey(KeyCode.UpArrow)) {
-			transform.position += transform.forward * KeyMoveSpeed * Time.deltaTime;
-		} else if (Input.GetKey(KeyCode.DownArrow)) {
-			transform.position -= transform.forward * KeyMoveSpeed * Time.deltaTime;
-		}
-
 		foreach (var material in materials) {
 			material.SetVector($"_Plane_{plane}_Position", transform.position);
 			material.SetVector($"_Plane_{plane}_Normal", transform.forward);
