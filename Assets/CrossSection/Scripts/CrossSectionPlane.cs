@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//[ExecuteInEditMode]
-public class CrossSectionPlane : MonoBehaviour {
 
+public class CrossSectionPlane : MonoBehaviour {
 	public string plane = "1";
-	public List<Material> materials = new List<Material>();
-	public float KeyMoveSpeed = 1;
+	public Material[] materials = new Material[0];
+
+	private void Start() {
+		var renderer = GetComponent<Renderer>();
+		if (materials.Length == 0 && renderer != null) {
+			materials = renderer.sharedMaterials;
+		}
+	}
 
 	void Update() {
 		foreach (var material in materials) {
 			material.SetVector($"_Plane_{plane}_Position", transform.position);
-			material.SetVector($"_Plane_{plane}_Normal", transform.forward);
+			material.SetVector($"_Plane_{plane}_Normal", transform.up);
 		}
 	}
 }
