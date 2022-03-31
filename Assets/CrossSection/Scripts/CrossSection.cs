@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[DefaultExecutionOrder(-100)]
 public class CrossSection : MonoBehaviour {
 
 	CrossSectionPlane _planePrefab, _planeXY, _planeXZ, _planeYZ;
@@ -9,7 +10,7 @@ public class CrossSection : MonoBehaviour {
 	Material _fresnelMat, _sectionMat;
 	Material[] _sharedMats = new Material[2];
 
-	void Start() {
+	void Awake() {
 		_renderers = GetComponentsInChildren<Renderer>();
 
 		_planePrefab = ((GameObject)Resources.Load("CrossSectionPlane")).GetComponent<CrossSectionPlane>();
