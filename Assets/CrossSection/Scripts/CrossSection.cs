@@ -4,26 +4,36 @@ using UnityEngine;
 
 [DefaultExecutionOrder(-100)]
 public class CrossSection : MonoBehaviour {
+	public Material sectionMaterial, normalMaterial;
+	//public bool keepNormalMaterial = true;
 
-	CrossSectionPlane _planePrefab, _planeXY, _planeXZ, _planeYZ;
+	[SerializeField] CrossSectionPlane _planePrefab;
+	CrossSectionPlane _planeXY, _planeXZ, _planeYZ;
 	Renderer[] _renderers;
-	Material _fresnelMat, _sectionMat;
 	Material[] _sharedMats = new Material[2];
 
 	void Awake() {
 		_renderers = GetComponentsInChildren<Renderer>();
 
-		_planePrefab = ((GameObject)Resources.Load("CrossSectionPlane")).GetComponent<CrossSectionPlane>();
-		_fresnelMat = (Material)Resources.Load("Materials/CrossSectionFresnel");
-		_sectionMat = (Material)Resources.Load("Materials/CrossSectionTextured");
+		if (_planePrefab == null)
+			_planePrefab = ((GameObject)Resources.Load("CrossSectionPlane")).GetComponent<CrossSectionPlane>();
+		if (sectionMaterial == null) 
+			sectionMaterial = (Material)Resources.Load("Materials/CrossSectionFresnel");
+		if (normalMaterial == null)
+			normalMaterial = (Material)Resources.Load("Materials/CrossSectionTextured");
 
-		_sharedMats[0] = new(_sectionMat);
-		_sharedMats[1] = new(_fresnelMat);
+		Create();
+	}
+
+	void Create() {
+		_sharedMats[0] = new(normalMaterial);
+		_sharedMats[1] = new(sectionMaterial);
 
 		foreach (var renderer in _renderers) {
 			renderer.sharedMaterials = _sharedMats;
 		}
 
+		if (_planeXY != null) Destroy(_planeXY);
 		_planeXY = Instantiate(_planePrefab, transform);
 		_planeXY.name = $"CrossSection Plane XY";
 		_planeXY.plane = "1";
@@ -32,11 +42,13 @@ public class CrossSection : MonoBehaviour {
 		rot.x = 90;
 		_planeXY.transform.localRotation = Quaternion.Euler(rot);
 
+		if (_planeXZ != null) Destroy(_planeXZ);
 		_planeXZ = Instantiate(_planePrefab, transform);
 		_planeXZ.name = $"CrossSection Plane XZ";
 		_planeXZ.plane = "2";
 		_planeXZ.materials = _sharedMats;
 
+		if (_planeYZ != null) Destroy(_planeYZ);
 		_planeYZ = Instantiate(_planePrefab, transform);
 		_planeYZ.name = $"CrossSection Plane YZ";
 		_planeYZ.plane = "3";
