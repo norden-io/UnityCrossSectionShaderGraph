@@ -171,8 +171,8 @@ Material:
     - _Plane3Position: {r: 1.54, g: 1.35, b: 0, a: 0}
     - _PlaneNormal: {r: 0, g: 0.9377072, b: 0.34742665, a: 0}
     - _PlanePosition: {r: 3.1, g: 0.6, b: -0.01, a: 0}
-    - _Plane_1_Normal: {r: 0, g: 1, b: 0, a: 0}
-    - _Plane_1_Position: {r: 0, g: 2.821, b: 2.82, a: 0}
+    - _Plane_1_Normal: {r: -0, g: 0, b: 1, a: 0}
+    - _Plane_1_Position: {r: 0, g: 3, b: 2.82, a: 0}
     - _Plane_2_Normal: {r: 0, g: -0.00000011920929, b: -1.0000001, a: 0}
     - _Plane_2_Position: {r: 0, g: 3, b: 2.82, a: 0}
     - _Plane_3_Normal: {r: -1.0000001, g: -0.00000011920929, b: 0, a: 0}
