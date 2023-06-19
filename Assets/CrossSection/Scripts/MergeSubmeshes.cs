@@ -20,6 +20,9 @@ public class MergeSubmeshes : MonoBehaviour
 	void Merge()
 	{
 		foreach (var mf in GetComponentsInChildren<MeshFilter>()) {
+			if (mf.sharedMesh.subMeshCount <= 1) 
+				continue;
+			
 			var p = mf.transform.position;
 			mf.transform.position = Vector3.zero;
 			var r = mf.transform.rotation;

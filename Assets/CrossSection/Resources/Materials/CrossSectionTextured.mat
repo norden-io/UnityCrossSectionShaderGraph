@@ -93,7 +93,7 @@ Material:
     - _AlphaSrcBlend: 1
     - _AlphaToMask: 0
     - _AlphaToMaskInspectorValue: 0
-    - _Ambient_Occlusion: 0
+    - _Ambient_Occlusion: 0.5
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
     - _Blend: 0
@@ -118,7 +118,7 @@ Material:
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _OpaqueCullMode: 2
-    - _QueueControl: 1
+    - _QueueControl: 0
     - _QueueOffset: 0
     - _RayTracing: 0
     - _ReceiveShadows: 1
